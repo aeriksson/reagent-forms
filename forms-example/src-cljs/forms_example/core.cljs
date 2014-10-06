@@ -41,6 +41,15 @@
     [:textarea.form-control
      {:field :textarea :id :comments}])
 
+   [:div.row
+    [:div.col-md-2
+     [:label "additional info"]]
+    [:div.col-md-5
+     [:input {:field :checkbox :id :additional-info.enabled}]]]
+   [:div {:field :alert :id :additional-info.enabled :event identity}
+    (input "favorite color" :text :additional-info.favorite-color)
+    (input "spirit animal" :text :additional-info.spirit-animal)]
+
    [:hr]
    (input "kg" :numeric :weight-kg)
    (input "lb" :numeric :weight-lb)
